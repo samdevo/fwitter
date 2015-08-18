@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+  <h1>
+    <div><font color="#ff0000">T</font><font color="#ff2000">o</font><font color="#ff4000"> </font><font color="#ff5f00">b</font><font color="#ff7f00">e</font><font color="#ff9f00"> </font><font color="#ffbf00">o</font><font color="#ffdf00">r</font><font color="#ffff00"> </font><font color="#ccff00">n</font><font color="#99ff00">o</font><font color="#66ff00">t</font><font color="#33ff00"> </font><font color="#00ff00">t</font><font color="#00ff40">o</font><font color="#00ff80"> </font><font color="#00ffbf">b</font><font color="#00ffff">e</font><font color="#00bfff">,</font><font color="#0080ff"> </font></div><div><font color="#0040ff">t</font><font color="#0000ff">h</font><font color="#2300ff">a</font><font color="#4600ff">t</font><font color="#6800ff"> </font><font color="#8b00ff">i</font><font color="#a800bf">s</font><font color="#c50080"> </font><font color="#e20040">t</font><font color="#ff0000">h</font><font color="#ff1900">e</font><font color="#ff3300"> </font><font color="#ff4c00">q</font><font color="#ff6600">u</font><font color="#ff7f00">e</font><font color="#ff9f00">s</font><font color="#ffbf00">t</font><font color="#ffdf00">i</font><font color="#ffff00">o</font><font color="#bfff00">n</font><font color="#80ff00">.</font><font color="#40ff00">.</font><font color="#00ff00">.</font></div><div></div>
+  </h1>
+  <style>
+    body{
+      background-image: url("http://www.netanimations.net/Moving-picture-puppy-dog-rolls-over-plays-dead-animated-gif.gif");
+      text-align: center;
+
+    }
+
+
+  </style>
+    <% @all_tweets.each do |tweet| %>
+    <li><%=tweet.username.capitalize + ": " + tweet.message%></li>
+  <%end%>
+  new tweet:
+  <form action="/new_tweet" method="POST">
+  <input type="text" name="username" placeholder="Your name"><br>
+  <input type="text" name="message" placeholder="Your message"><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
